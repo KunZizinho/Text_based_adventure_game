@@ -1,4 +1,5 @@
 # Adventure game 
+import time
 
 print('Welcome to Santa Cruz Adventure Game!')
 print('**************************************')
@@ -14,6 +15,7 @@ while not(choice_1 == 'y' or choice_1 == 'n'):
 if choice_1 == 'y':
     print('You keep moving closer to the sound.')
     print('The sound suddenly stops.')
+    time.sleep(3)
     print('You are now LOST! ...')
     print('You try to call on your phone, but there is no signal!')
     direction = input('Which direction do you go?  Nort, South, West or East: ')
@@ -21,32 +23,39 @@ if choice_1 == 'y':
         print('You reached abandoned cabin.')
         if item == 'm':
             print('You can use the map to find your way home.')
+            time.sleep(3)
             print('CONGRATULATIONS! You got out safely. You won the game.')
         else:
             print('If you had a map, you could have find tour way home.')
+            time.sleep(3)
             print('------ You are still LOST! You lost the game -----')
     elif direction == 'South' or direction == 'south':
         print('You reach a river with a broken bridge.')
         if item == 's' or item == 'r':
             print('You have chosen the item that can fix the bridge.')
             print('You fixed the bridge, crossed over and find your way home.')
+            time.sleep(3)
             print('CONGRATULATIONS! You got out safely. You won the game.')
         else:
             print('If you had a rope or a stick, you could have fix the bridge and find your way home.')
+            time.sleep(3)
             print('------ You are still LOST! You lost the game -----')
     elif direction == 'West' or direction == 'west':
         print('You are walking in the dark and trip over a fallen log.')
         print('you have hurt your foot. You sit down and wait for help.')
         print('This could be a long time. You are still LOST!')
+        time.sleep(3)
         print('------ You are still LOST! You lost the game -----')
     else:
         print('You reach the side of highway. It is dark.')
         if item == 'f':
             print('You use your flashlight to signal oncoming traffic for help.')
             print('A car stops and gives you a ride home.')
+            time.sleep(3)
             print('CONGRATULATIONS! You got out safely. You won the game.')
         else:
             print('If you had a flashlight, you could have signal for help.')
+            time.sleep(3)
             print('------ You are still LOST! You lost the game -----')
 else:
     print('Good idea. You are not taking risks.')
@@ -68,12 +77,15 @@ if answer == 'Python' or answer == 'python':
         print('Luckily , you did ckoose correctly!')
         print('You give her the chocolate.')
         print('She helps you get home.')
+        time.sleep(3)
         print('CONGRATULATIONS! You got out safely. You won the game.')
     else:
         print('If you had chosen that chocolate, She would have gave you a ride home.')
         print('She rides away, leaving youalone and lost.')
+        time.sleep(3)
         print('------ You are still LOST! You lost the game -----')
 else:
     print('She did not like your answer.')
     print('She rides away, leaving youalone and lost.')
+    time.sleep(3)
     print('------ You are still LOST! You lost the game -----')
