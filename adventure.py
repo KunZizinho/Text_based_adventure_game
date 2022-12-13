@@ -7,7 +7,7 @@ print('You go on a evning hike alone in the mountains.')
 print('You can pick one item to bring with you -')
 print('map(m), flashlight(f), chocolate(c), rope(r) or stick(s)')
 item = input('What do you choose?: ')
-print('You head a humming sound.')
+print('You hear a humming sound.')
 choice_1 = input('Do you follow the sound? Enter Y or n: ')
 if choice_1 == 'y':
     print('You keep moving closer to the sound.')
