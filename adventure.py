@@ -9,6 +9,8 @@ print('map(m), flashlight(f), chocolate(c), rope(r) or stick(s)')
 item = input('What do you choose?: ')
 print('You hear a humming sound.')
 choice_1 = input('Do you follow the sound? Enter Y or n: ')
+while not(choice_1 == 'y' or choice_1 == 'n'):
+    choice_1 = input('Invalid input. Please enter y or n: ')
 if choice_1 == 'y':
     print('You keep moving closer to the sound.')
     print('The sound suddenly stops.')
