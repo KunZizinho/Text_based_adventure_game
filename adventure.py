@@ -1,4 +1,5 @@
 # Adventure game 
+
 print('Welcome to Santa Cruz Adventure Game!')
 print('**************************************')
 print('You are visiting Santa Cruz, California.')
@@ -13,6 +14,38 @@ if choice_1 == 'y':
     print('The sound suddenly stops.')
     print('You are now LOST! ...')
     print('You try to call on your phone, but there is no signal!')
+    direction = input('Which direction do you go?  Nort, South, West or East: ')
+    if direction == 'Nort' or direction == 'north':
+        print('You reached abandoned cabin.')
+        if item == 'm':
+            print('You can use the map to find your way home.')
+            print('CONGRATULATIONS! You got out safely. You won the game.')
+        else:
+            print('If you had a map, you could have find tour way home.')
+            print('------ You are still LOST! You lost the game -----')
+    elif direction == 'South' or direction == 'south':
+        print('You reach a river with a broken bridge.')
+        if item == 's' or item == 'r':
+            print('You have chosen the item that can fix the bridge.')
+            print('You fixed the bridge, crossed over and find your way home.')
+            print('CONGRATULATIONS! You got out safely. You won the game.')
+        else:
+            print('If you had a rope or a stick, you could have fix the bridge and find your way home.')
+            print('------ You are still LOST! You lost the game -----')
+    elif direction == 'West' or direction == 'west':
+        print('You are walking in the dark and trip over a fallen log.')
+        print('you have hurt your foot. You sit down and wait for help.')
+        print('This could be a long time. You are still LOST!')
+        print('------ You are still LOST! You lost the game -----')
+    else:
+        print('You reach the side of highway. It is dark.')
+        if item == 'f':
+            print('You use your flashlight to signal oncoming traffic for help.')
+            print('A car stops and gives you a ride home.')
+            print('CONGRATULATIONS! You got out safely. You won the game.')
+        else:
+            print('If you had a flashlight, you could have signal for help.')
+            print('------ You are still LOST! You lost the game -----')
 else:
     print('Good idea. You are not taking risks.') 
     print('You start walking back to the starting point.')
@@ -25,7 +58,7 @@ while action == 'c':
 print('You are running fast. The sound gets really loud.')
 print(' A woman on an electric scooter comes behind you.')
 question = input('She asks, Name my favorite computer programming language.: ')
-if question == 'Python' | 'python':
+if question == 'Python' or question == 'python':
     print('She says, Yes Python is my favorite computer programming language.')
 print('If you have some chocolate, I can help you.')
 print('Luckily , you did ckoose correctly!')
