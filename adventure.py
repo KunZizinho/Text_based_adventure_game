@@ -47,7 +47,7 @@ if choice_1 == 'y':
             print('If you had a flashlight, you could have signal for help.')
             print('------ You are still LOST! You lost the game -----')
 else:
-    print('Good idea. You are not taking risks.') 
+    print('Good idea. You are not taking risks.')
     print('You start walking back to the starting point.')
     print('You realize you are LOST! ')
     print('The sound is behind you and its getting louder. You panic!')
@@ -57,11 +57,21 @@ while action == 'c':
     action = input('Do you start running(r) or stop to make a call(c): ')
 print('You are running fast. The sound gets really loud.')
 print(' A woman on an electric scooter comes behind you.')
-question = input('She asks, Name my favorite computer programming language.: ')
-if question == 'Python' or question == 'python':
+
+answer = input('She asks, Name my favorite computer programming language.: ')
+if answer == 'Python' or answer == 'python':
     print('She says, Yes Python is my favorite computer programming language.')
-print('If you have some chocolate, I can help you.')
-print('Luckily , you did ckoose correctly!')
-print('You give her the chocolate.')
-print('She helps you get home.')
-print('CONGRATULATIONS! You got out safely. You won the game.')
+    if item == 'c':
+        print('If you have some chocolate, I can help you.')
+        print('Luckily , you did ckoose correctly!')
+        print('You give her the chocolate.')
+        print('She helps you get home.')
+        print('CONGRATULATIONS! You got out safely. You won the game.')
+    else:
+        print('If you had chosen that chocolate, She would have gave you a ride home.')
+        print('She rides away, leaving youalone and lost.')
+        print('------ You are still LOST! You lost the game -----')
+else:
+    print('She did not like your answer.')
+    print('She rides away, leaving youalone and lost.')
+    print('------ You are still LOST! You lost the game -----')
